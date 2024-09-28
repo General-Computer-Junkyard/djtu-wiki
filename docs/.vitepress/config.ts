@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress';
 import sidebars from './sidebar';
 
 export default defineConfig({
+  base:'/DJTU-wiki/',
   title: 'DJTU-wiki',
   description: 'Djtu生存指南科学讲义',
   themeConfig: {

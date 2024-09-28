@@ -15,8 +15,6 @@ const __dirname = path.dirname(__filename);
 const docsPath = path.join(__dirname, '../docs');
 const outputFilePath = path.join(__dirname, '../docs/.vitepress/sidebar.ts');
 
-
-
 function formatPath(filePath: string): string {
   return filePath.replace(/\\/g, '/').replace(/\.md$/, '');
 }
@@ -25,8 +23,16 @@ function formatText(name: string): string {
   return name.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
 }
 
+// 自然排序函数
+function naturalSort(a: string, b: string): number {
+  return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
+}
+
 function getFiles(dir: string, basePath = ''): any[] {
-  const files = fs.readdirSync(dir);
+  let files = fs.readdirSync(dir);
+  // 对文件和目录进行自然排序
+  files.sort(naturalSort);
+
   const result: any[] = [];
 
   files.forEach(file => {
@@ -39,13 +45,13 @@ function getFiles(dir: string, basePath = ''): any[] {
         result.push({
           text: formatText(file),
           collapsible: true,
-          items 
+          items
         });
       }
     } else if (file.endsWith('.md') && file.toLowerCase() !== 'readme.md') {
       result.push({
-        text: formatText(path.basename(file, '.md')), 
-        link: formatPath(`/${relativePath}`) 
+        text: formatText(path.basename(file, '.md')),
+        link: formatPath(`/${relativePath}`)
       });
     }
   });
@@ -53,9 +59,13 @@ function getFiles(dir: string, basePath = ''): any[] {
   return result;
 }
 
+
 function buildSidebar(dir: string): { [key: string]: any[] } {
   const sidebar: { [key: string]: any[] } = {};
-  const sections = fs.readdirSync(dir);
+  let sections = fs.readdirSync(dir);
+
+  // 对顶级目录进行自然排序
+  sections.sort(naturalSort);
 
   sections.forEach(section => {
     const fullPath = path.join(dir, section);
@@ -70,6 +80,7 @@ function buildSidebar(dir: string): { [key: string]: any[] } {
       }
     }
   });
+
   return sidebar;
 }
 
