@@ -1,0 +1,52 @@
+// 之前在生成侧边栏一直有问题,对于vitepress来说使用ts要比js舒适度高一点,所以把js取消使用
+// 这算是遗弃代码,但是毕竟是哥们写的,不是很希望扔了,所以放在这里当作告示
+
+const fs = require('fs');
+const path = require('path');
+
+const docsPath = path.join(__dirname, '../docs');
+const outputFilePath = path.join(__dirname, '../docs/.vitepress/sidebar.js');
+
+function formatPath(filePath) {
+  return filePath.replace(/\\/g, '/').replace(/\.md$/, '');
+}
+
+function formatText(name) {
+  return name.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
+}
+
+function getFiles(dir, basePath = '') {
+  const files = fs.readdirSync(dir);
+  const result = [];
+
+  files.forEach(file => {
+    const fullPath = path.join(dir, file);
+    const relativePath = path.join(basePath, file);
+
+    if (fs.statSync(fullPath).isDirectory()) {
+     
+      const children = getFiles(fullPath, relativePath);
+      if (children.length > 0) {
+        result.push({
+          text: formatText(file), 
+          collapsible: true,
+          children
+        });
+      }
+    } else if (file.endsWith('.md') && file.toLowerCase() !== 'readme.md') {
+      result.push({
+        text: formatText(path.basename(file, '.md')), 
+        link: formatPath(`/${relativePath}`) 
+      });
+    }
+  });
+
+  return result;
+}
+
+const sidebar = getFiles(docsPath);
+
+const sidebarConfig = `export default ${JSON.stringify(sidebar, null, 2)};`;
+
+fs.writeFileSync(outputFilePath, sidebarConfig, 'utf-8');
+console.log('Sidebar configuration generated successfully.');
