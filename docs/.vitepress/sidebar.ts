@@ -11,6 +11,10 @@ export default {
         {
           "text": "Index",
           "link": "/guide/aspire/index"
+        },
+        {
+          "text": "Question",
+          "link": "/guide/aspire/question"
         }
       ]
     },
@@ -25,6 +29,18 @@ export default {
         {
           "text": "Index",
           "link": "/guide/being/index"
+        },
+        {
+          "text": "Internet",
+          "link": "/guide/being/Internet"
+        },
+        {
+          "text": "Note",
+          "link": "/guide/being/note"
+        },
+        {
+          "text": "Resource",
+          "link": "/guide/being/resource"
         }
       ]
     },
