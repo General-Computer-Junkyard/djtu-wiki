@@ -1,1 +1,2 @@
 *.vue linguist-language=Vue
+node_modules/ linguist-ignore
