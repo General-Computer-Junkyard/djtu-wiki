@@ -1,4 +1,48 @@
 export default {
+  "/guide/": [
+    {
+      "text": "Aspire",
+      "collapsible": true,
+      "items": [
+        {
+          "text": "1",
+          "link": "/guide/aspire/1"
+        },
+        {
+          "text": "Index",
+          "link": "/guide/aspire/index"
+        }
+      ]
+    },
+    {
+      "text": "Being",
+      "collapsible": true,
+      "items": [
+        {
+          "text": "3",
+          "link": "/guide/being/3"
+        },
+        {
+          "text": "Index",
+          "link": "/guide/being/index"
+        }
+      ]
+    },
+    {
+      "text": "Direction",
+      "collapsible": true,
+      "items": [
+        {
+          "text": "2",
+          "link": "/guide/direction/2"
+        },
+        {
+          "text": "Index",
+          "link": "/guide/direction/index"
+        }
+      ]
+    }
+  ],
   "/jobs/": [
     {
       "text": "Algorithm",
