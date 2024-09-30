@@ -40,6 +40,18 @@ Obsidian 具备了市面上主流笔记软件的大部分功能：
 
 - **丰富的插件生态**：Obsidian 的插件生态极其丰富，插件数量庞大，且热门插件的 star 数高，开发者们积极回应用户的反馈和 issue，插件版本也会持续迭代更新。通过这些插件，Obsidian 可以实现 `all in one` 的效果，即将各类知识来源统一整合于一个平台，极大提升了知识管理的效率。
 
+#### 参考网站
+
+教程过多，而且要是视频介绍基本都比较长，所以这边建议大概知道怎么使用就先上手使用，不要太关注花哨的插件和中看不中用的设计上了，工具是为了我们学习减少时间的工具，花太多时间在插件选择和一味追求所谓的高效插件浪费时间岂不是本末倒置？
+
+[Obsidian 的高级玩法](https://juejin.cn/post/7145351315705577485)
+
+[3000+小时积累的学习工作流](https://sspai.com/post/75969)
+
+[黑曜石：学习工具之王 (Obsidian: The King of Learning Tools)](https://www.bilibili.com/video/BV1C6vkeuEe3/?spm_id_from=333.337.search-card.all.click&vd_source=3ac1f7034be656f967f53e96dcd28793)
+
+[由此开始 Obsidian 使用教程](https://www.bilibili.com/video/BV19a411s7R9/?spm_id_from=333.788&vd_source=3ac1f7034be656f967f53e96dcd28793)
+
 ### 语雀
 
 语雀笔者在大一时候使用的，感觉各方面也挺好用，除了`打开速度比较慢`，但是相比于Obdiansion也有其独特之处，比如帮助个人和团队高效地创建、组织、分享和协作处理知识。尤其适用于文档管理、项目协作和企业知识库的构建：
