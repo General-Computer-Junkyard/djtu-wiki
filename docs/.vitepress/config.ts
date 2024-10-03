@@ -32,6 +32,12 @@ export default defineConfig({
           { text: 'Web 开发', link: '/jobs/web/' },
           { text: '嵌入式开发', link: '/jobs/embedded/' }
         ]
+      },
+      { 
+        text: 'Course', 
+        items: [
+          { text: '泛计算机类资源搜集', link: '/course' },
+        ]
       }
     ],
     // 将 sidebar 放在 themeConfig 内
