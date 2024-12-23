@@ -1,4 +1,22 @@
 export default {
+  "/course/": [
+    {
+      "text": "Computer Architecture",
+      "link": "/course/Computer-Architecture"
+    },
+    {
+      "text": "Database",
+      "link": "/course/database"
+    },
+    {
+      "text": "Index",
+      "link": "/course/index"
+    },
+    {
+      "text": "Operating System",
+      "link": "/course/operating-system"
+    }
+  ],
   "/guide/": [
     {
       "text": "Aspire",
@@ -61,12 +79,68 @@ export default {
   ],
   "/jobs/": [
     {
+      "text": "Ai",
+      "collapsible": true,
+      "items": [
+        {
+          "text": "Hello",
+          "link": "/jobs/ai/hello"
+        },
+        {
+          "text": "Index",
+          "link": "/jobs/ai/index"
+        }
+      ]
+    },
+    {
       "text": "Algorithm",
       "collapsible": true,
       "items": [
         {
           "text": "1",
           "link": "/jobs/algorithm/1"
+        },
+        {
+          "text": "Index",
+          "link": "/jobs/algorithm/index"
+        }
+      ]
+    },
+    {
+      "text": "Embedded",
+      "collapsible": true,
+      "items": [
+        {
+          "text": "Hello",
+          "link": "/jobs/embedded/hello"
+        }
+      ]
+    },
+    {
+      "text": "Typst",
+      "collapsible": true,
+      "items": [
+        {
+          "text": "Index",
+          "link": "/jobs/Typst/index"
+        },
+        {
+          "text": "Latex",
+          "link": "/jobs/Typst/latex"
+        },
+        {
+          "text": "Typst",
+          "link": "/jobs/Typst/typst"
+        }
+      ]
+    },
+    {
+      "text": "Web",
+      "collapsible": true,
+      "items": [
+        {
+          "text": "Hello",
+          "link": "/jobs/Web/hello"
         }
       ]
     }

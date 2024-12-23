@@ -27,10 +27,11 @@ export default defineConfig({
       {
         text: 'Technology Stack',
         items: [
-          { text: '算法', link: '/jobs/algorithm/' },
-          { text: '人工智能', link: '/jobs/ai/' },
-          { text: 'Web 开发', link: '/jobs/web/' },
-          { text: '嵌入式开发', link: '/jobs/embedded/' }
+          { text: '算法', link: '/jobs/algorithm/1' },
+          { text: '人工智能', link: '/jobs/ai/hello' },
+          { text: 'Web 开发', link: '/jobs/Web/hello' },
+          { text: '嵌入式开发', link: '/jobs/embedded/hello' },
+          { text: 'typst和latex', link: '/jobs/Typst/latex' }
         ]
       },
       { 
