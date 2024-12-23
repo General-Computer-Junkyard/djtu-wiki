@@ -5,6 +5,9 @@ export default defineConfig({
   base: '/djtu-wiki/',
   title: 'djtu-wiki',
   description: 'Djtu生存指南科学讲义',
+
+  
+
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
@@ -43,5 +46,15 @@ export default defineConfig({
     ],
     // 将 sidebar 放在 themeConfig 内
     sidebar: sidebars
+  },
+
+  vue: {
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) => tag.includes('-')
+      }
+    }
   }
+  
 });
+
