@@ -1,0 +1,30 @@
+/* Tetris game styles */
+.tetris-game {
+  @apply flex flex-col items-center p-4 bg-gray-100 rounded-lg;
+}
+
+.tetris-board {
+  @apply border-4 border-gray-800 bg-gray-900;
+}
+
+.tetris-cell {
+  width: 24px;
+  height: 24px;
+  @apply border border-gray-700;
+}
+
+.tetris-button {
+  @apply px-4 py-2 text-white rounded;
+}
+
+.tetris-button-primary {
+  @apply bg-blue-500 hover:bg-blue-600;
+}
+
+.tetris-button-secondary {
+  @apply bg-green-500 hover:bg-green-600;
+}
+
+.tetris-controls {
+  @apply mt-4 text-sm text-gray-600;
+} 

@@ -156,4 +156,9 @@ export default defineConfig({
       },
     },
   },
+  vite: {
+    ssr: {
+      noExternal: ["vue"],
+    },
+  },
 });

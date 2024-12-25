@@ -41,13 +41,13 @@ const TETROMINOES = {
 }
 
 const COLORS = {
-  I: '#00f0f0',
-  O: '#f0f000',
-  T: '#a000f0',
-  L: '#f0a000',
-  J: '#0000f0',
-  S: '#00f000',
-  Z: '#f00000',
+  I: '#21839E',
+  O: '#7CB5B4',
+  T: '#7F6FC1',
+  L: '#A8AECB',
+  J: '#48AFE8',
+  S: '#F2ABF7',
+  Z: '#BB7593',
 }
 
 // 游戏状态
@@ -164,17 +164,17 @@ const rotatePiece = () => {
 const handleKeyPress = (e) => {
   if (gameOver.value || isPaused.value) return
   
-  switch (e.key) {
-    case 'ArrowLeft':
+  switch (e.key.toLowerCase()) {
+    case 'a':
       movePiece(-1, 0)
       break
-    case 'ArrowRight':
+    case 'd':
       movePiece(1, 0)
       break
-    case 'ArrowDown':
+    case 's':
       movePiece(0, 1)
       break
-    case 'ArrowUp':
+    case 'w':
       rotatePiece()
       break
     case ' ':
@@ -233,19 +233,19 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="flex flex-col items-center p-4 bg-gray-100 rounded-lg">
+  <div class="tetris-game">
     <div class="mb-4">
       <div class="text-xl font-bold">得分: {{ score }}</div>
       <div v-if="gameOver" class="text-red-500 font-bold">游戏结束!</div>
       <div v-if="isPaused" class="text-blue-500 font-bold">游戏暂停</div>
     </div>
     
-    <div class="border-4 border-gray-800 bg-gray-900">
+    <div class="tetris-board">
       <div v-for="(row, y) in gameBoard" :key="y" class="flex">
         <div
           v-for="(cell, x) in row"
           :key="x"
-          class="w-6 h-6 border border-gray-700"
+          class="tetris-cell"
           :style="{ backgroundColor: getCellColor(y, x) }"
         />
       </div>
@@ -254,27 +254,119 @@ onUnmounted(() => {
     <div class="mt-4 space-x-4">
       <button
         @click="restartGame"
-        class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+        class="tetris-button tetris-button-primary"
       >
         重新开始
       </button>
       <button
         @click="isPaused = !isPaused"
-        class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+        class="tetris-button tetris-button-secondary"
       >
         {{ isPaused ? '继续' : '暂停' }}
       </button>
     </div>
 
-    <div class="mt-4 text-sm text-gray-600">
+    <div class="tetris-controls">
       <p>控制方式:</p>
       <ul class="list-disc list-inside">
-        <li>方向键左右: 移动方块</li>
-        <li>方向键上: 旋转方块</li>
-        <li>方向键下: 加速下落</li>
+        <li>A/D: 左右移动方块</li>
+        <li>W: 旋转方块</li>
+        <li>S: 加速下落</li>
         <li>空格键: 直接落地</li>
         <li>P键: 暂停/继续</li>
       </ul>
     </div>
   </div>
 </template>
+
+<style scoped>
+.tetris-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+.tetris-board {
+  border: 4px solid #1f2937;
+  background-color: #111827;
+  display: inline-block;
+}
+
+.tetris-cell {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #374151;
+  display: inline-block;
+}
+
+.tetris-button {
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 0.25rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.tetris-button-primary {
+  background-color: #3b82f6;
+}
+
+.tetris-button-primary:hover {
+  background-color: #2563eb;
+}
+
+.tetris-button-secondary {
+  background-color: #10b981;
+}
+
+.tetris-button-secondary:hover {
+  background-color: #059669;
+}
+
+.tetris-controls {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.flex {
+  display: flex;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.space-x-4 > * + * {
+  margin-left: 1rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-red-500 {
+  color: #ef4444;
+}
+
+.text-blue-500 {
+  color: #3b82f6;
+}
+
+.list-disc {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+</style>
