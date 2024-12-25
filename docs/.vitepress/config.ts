@@ -6,7 +6,13 @@ export default defineConfig({
   title: 'djtu-wiki',
   description: 'Djtu生存指南科学讲义',
 
-  
+  vue: {
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) => tag.includes('-')
+      }
+    }
+  },
 
   themeConfig: {
     nav: [
@@ -34,7 +40,7 @@ export default defineConfig({
           { text: '人工智能', link: '/jobs/ai/hello' },
           { text: 'Web 开发', link: '/jobs/Web/hello' },
           { text: '嵌入式开发', link: '/jobs/embedded/hello' },
-          { text: 'typst和latex', link: '/jobs/Typst/latex' }
+          { text: '排版工具', link: '/jobs/Typst/latex' }
         ]
       },
       { 
@@ -48,13 +54,10 @@ export default defineConfig({
     sidebar: sidebars
   },
 
-  vue: {
-    template: {
-      compilerOptions: {
-        isCustomElement: (tag) => tag.includes('-')
-      }
+  vite: {
+    ssr: {
+      noExternal: ['vue']
     }
   }
-  
 });
 
