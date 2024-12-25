@@ -75,6 +75,10 @@ export default {
           "link": "/guide/direction/index"
         }
       ]
+    },
+    {
+      "text": "Index",
+      "link": "/guide/index"
     }
   ],
   "/jobs/": [
@@ -103,6 +107,10 @@ export default {
         {
           "text": "Index",
           "link": "/jobs/algorithm/index"
+        },
+        {
+          "text": "Template",
+          "link": "/jobs/algorithm/template"
         }
       ]
     },
@@ -117,20 +125,24 @@ export default {
       ]
     },
     {
+      "text": "Index",
+      "link": "/jobs/index"
+    },
+    {
       "text": "Typst",
       "collapsible": true,
       "items": [
         {
           "text": "Index",
-          "link": "/jobs/Typst/index"
+          "link": "/jobs/typst/index"
         },
         {
           "text": "Latex",
-          "link": "/jobs/Typst/latex"
+          "link": "/jobs/typst/latex"
         },
         {
           "text": "Typst",
-          "link": "/jobs/Typst/typst"
+          "link": "/jobs/typst/typst"
         }
       ]
     },
@@ -159,6 +171,10 @@ export default {
           "link": "/language/cpp/two"
         }
       ]
+    },
+    {
+      "text": "Index",
+      "link": "/language/index"
     },
     {
       "text": "Python",
