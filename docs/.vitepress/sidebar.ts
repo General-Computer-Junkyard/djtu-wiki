@@ -138,15 +138,15 @@ export default {
       "items": [
         {
           "text": "Index",
-          "link": "/jobs/typst/index"
+          "link": "/jobs/Typst/index"
         },
         {
           "text": "Latex",
-          "link": "/jobs/typst/latex"
+          "link": "/jobs/Typst/latex"
         },
         {
           "text": "Typst",
-          "link": "/jobs/typst/typst"
+          "link": "/jobs/Typst/typst"
         }
       ]
     },
