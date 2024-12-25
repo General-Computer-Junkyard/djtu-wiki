@@ -10,7 +10,9 @@
     "docs:serve": "vitepress serve docs"
   },
   "devDependencies": {
+    "@types/katex": "^0.16.7",
     "@types/node": "^22.7.4",
+    "markdown-it-mathjax3": "^4.3.2",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.1",
     "typescript": "^5.6.2",

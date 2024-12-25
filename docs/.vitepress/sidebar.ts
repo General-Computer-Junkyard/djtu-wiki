@@ -111,6 +111,10 @@ export default {
         {
           "text": "Index",
           "link": "/jobs/algorithm/index"
+        },
+        {
+          "text": "Template",
+          "link": "/jobs/algorithm/template"
         }
       ]
     },
@@ -134,15 +138,15 @@ export default {
       "items": [
         {
           "text": "Index",
-          "link": "/jobs/Typst/index"
+          "link": "/jobs/typst/index"
         },
         {
           "text": "Latex",
-          "link": "/jobs/Typst/latex"
+          "link": "/jobs/typst/latex"
         },
         {
           "text": "Typst",
-          "link": "/jobs/Typst/typst"
+          "link": "/jobs/typst/typst"
         }
       ]
     },

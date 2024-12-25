@@ -1,31 +1,31 @@
 {
-  "hash": "3574dff0",
+  "hash": "c6cba3b2",
   "configHash": "2403c006",
-  "lockfileHash": "8e1e06eb",
-  "browserHash": "f0bdfaf3",
+  "lockfileHash": "7267f262",
+  "browserHash": "9676f422",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "1b09c810",
+      "fileHash": "62c2a5ae",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "aa99bc88",
+      "fileHash": "ffe1f3f5",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "b222ac5a",
+      "fileHash": "3c687f3c",
       "needsInterop": false
     },
     "@tensorflow/tfjs": {
       "src": "../../../../node_modules/@tensorflow/tfjs/dist/index.js",
       "file": "@tensorflow_tfjs.js",
-      "fileHash": "4241fe54",
+      "fileHash": "44776002",
       "needsInterop": false
     }
   },
