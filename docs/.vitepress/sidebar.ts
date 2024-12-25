@@ -75,6 +75,10 @@ export default {
           "link": "/guide/direction/index"
         }
       ]
+    },
+    {
+      "text": "Index",
+      "link": "/guide/index"
     }
   ],
   "/jobs/": [
@@ -82,6 +86,10 @@ export default {
       "text": "Ai",
       "collapsible": true,
       "items": [
+        {
+          "text": "Cv",
+          "link": "/jobs/ai/cv"
+        },
         {
           "text": "Hello",
           "link": "/jobs/ai/hello"
@@ -115,6 +123,10 @@ export default {
           "link": "/jobs/embedded/hello"
         }
       ]
+    },
+    {
+      "text": "Index",
+      "link": "/jobs/index"
     },
     {
       "text": "Typst",
@@ -159,6 +171,10 @@ export default {
           "link": "/language/cpp/two"
         }
       ]
+    },
+    {
+      "text": "Index",
+      "link": "/language/index"
     },
     {
       "text": "Python",
